@@ -64,6 +64,18 @@ server.addHook("preHandler", async function (request: any, reply: any) {
       return true;
     }
     if (
+      request.url === "/api/v1/auth/user/register/external" &&
+      request.method === "POST"
+    ) {
+      return true;
+    }
+    if (
+      request.url === "/api/v1/auth/password-reset" &&
+      request.method === "POST"
+    ) {
+      return true;
+    }
+    if (
       request.url === "/api/v1/ticket/public/create" &&
       request.method === "POST"
     ) {
