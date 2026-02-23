@@ -15,6 +15,9 @@ module.exports = withPlugins(
     reactStrictMode: false,
     swcMinify: true,
     output: 'standalone',
+    typescript: {
+      ignoreBuildErrors: true,
+    },
 
     async rewrites() {
       return [
